@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xam.MarkupExtensions; assembly=Xam;"
+             x:Class="Xam.ImagePage">
+    <!--<AbsoluteLayout>
+        <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"
+                           AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100" 
+                           AbsoluteLayout.LayoutFlags="PositionProportional">
+        </ActivityIndicator>
+        <Image Source="{local:EmbeddedImage ResourceId=Xam.Images.download.jpg}" Aspect="AspectFit" x:Name="image"
+               AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>-->
+    <Button>
+        <Button.Image>
+            <OnPlatform x:TypeArguments="FileImageSource" 
+                        iOS="clock.png"
+                        Android="clock.png"
+                        WinPhone="Images/clock.png"/>
+        </Button.Image>
+    </Button>
+    <!--</AbsoluteLayout>-->   
+</ContentPage>

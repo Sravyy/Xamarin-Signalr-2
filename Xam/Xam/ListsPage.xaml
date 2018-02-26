@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="20,20,20,20"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xam.ListsPage">
+    <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}" DetailColor="Purple" />-->
+                <!--<ImageCell Text="{Binding Name}" Detail="{Binding Status}" DetailColor="Purple" ImageSource="{Binding ImageUrl}"/>-->
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="3">
+                        <Image Source="{Binding ImageUrl}"/>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Status}" TextColor="Pink"/>
+                        </StackLayout>
+                        <Button Text="Follow"/>
+                    </StackLayout>
+                </ViewCell>
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
